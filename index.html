@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的小站</title>
+<style>
+body { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 640px; margin: 80px auto; padding: 0 20px; line-height: 1.8; color: #222; }
+h1 { font-size: 28px; }
+#time { font-size: 20px; font-weight: 600; }
+p { font-size: 18px; }
+</style>
+</head>
+<body>
+<h1>我的小站</h1>
+<p>你好，欢迎来到我的小站！</p>
+<p>现在时间：<span id="time"></span></p>
+<p>这是一个部署在 GitHub Pages 上的小站。</p>
+<script>
+function updateTime() {
+  document.getElementById("time").textContent = new Date().toLocaleString();
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
